@@ -4,6 +4,11 @@ Guia completo para instalar e configurar o sistema PenAreia no Raspberry Pi 4 co
 
 ## 🚀 Instalação Rápida
 
+### Pré-requisitos
+
+**Importante:** Raspberry Pi OS Bookworm usa ambiente Python gerenciado (PEP 668).  
+**Nunca** instale pacotes Python diretamente com `pip` fora de um ambiente virtual.
+
 ### 1. Preparar o Sistema
 
 ```bash
@@ -11,10 +16,19 @@ Guia completo para instalar e configurar o sistema PenAreia no Raspberry Pi 4 co
 git clone https://github.com/diogocs32/PenAreia092025.git
 cd PenAreia092025
 
-# Execute o script de instalação
+# Execute o script de instalação (cria ambiente virtual automaticamente)
 chmod +x install_pi.sh
 ./install_pi.sh
 ```
+
+**O script automático:**
+- ✅ Atualiza o sistema
+- ✅ Instala dependências (ffmpeg, sqlite3, etc)
+- ✅ Cria ambiente virtual `.venv`
+- ✅ Instala pacotes Python
+- ✅ Configura overclock seguro
+- ✅ Configura serviço systemd
+- ✅ Configura watchdog
 
 ### 2. Configurar Credenciais
 
@@ -24,6 +38,7 @@ cp config_pi.ini config.ini
 
 # Edite suas credenciais
 nano config.ini
+# Configure: KEY_ID, APPLICATION_KEY, BUCKET_NAME
 ```
 
 ### 3. Iniciar o Serviço
@@ -32,9 +47,43 @@ nano config.ini
 # Reinicie o sistema para aplicar todas as configurações
 sudo reboot
 
-# O serviço inicia automaticamente após o reboot
+# Após reboot, o serviço inicia automaticamente
 # Verifique o status
 sudo systemctl status penareia
+
+# Ver logs em tempo real
+sudo journalctl -u penareia -f
+```
+
+### 🔧 Instalação Manual (Alternativa)
+
+Se preferir instalar passo a passo:
+
+```bash
+cd PenAreia092025
+
+# 1. Criar ambiente virtual
+python3 -m venv .venv
+
+# 2. Ativar ambiente virtual
+source .venv/bin/activate
+
+# 3. Instalar dependências
+pip install --upgrade pip
+pip install -r requirements.txt
+pip install -r requirements_pi.txt
+
+# 4. Configurar
+cp config_pi.ini config.ini
+nano config.ini
+
+# 5. Testar
+python app.py
+```
+
+**⚠️ Importante:** Sempre ative o ambiente virtual antes de rodar comandos Python:
+```bash
+source .venv/bin/activate
 ```
 
 ## ⚙️ Otimizações Implementadas

@@ -1205,25 +1205,308 @@ def home():
     ffmpeg_status = "✅ Instalado" if check_ffmpeg() else "❌ Não encontrado"
     
     return f"""
-    <h1>🎥 Servidor Flask Filmaeu Online!</h1>
-    <h2>Status do Sistema:</h2>
-    <ul>
-        <li><strong>FFmpeg:</strong> {ffmpeg_status}</li>
-        <li><strong>Resolução:</strong> {frame_width}x{frame_height}</li>
-        <li><strong>FPS:</strong> {detected_fps}</li>
-        <li><strong>Buffer:</strong> {BUFFER_SECONDS}s</li>
-        <li><strong>Gravação:</strong> {SAVE_SECONDS}s</li>
-    </ul>
-    
-    <h2>Endpoints disponíveis:</h2>
-    <ul>
-        <li><strong>GET /</strong> - Esta página</li>
-        <li><strong>POST /trigger</strong> - Salva vídeo, converte com FFmpeg e envia para B2 e banco</li>
-        <li><strong>GET /status</strong> - Status detalhado do sistema</li>
-    </ul>
-    
-    <h2>Formato de vídeo:</h2>
-    <p>✅ H.264 + AAC (compatível com todos os navegadores)</p>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>🎥 Sistema Filmaeu - Controle de Gravação</title>
+        <style>
+            * {{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }}
+            
+            body {{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }}
+            
+            .container {{
+                background: white;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                padding: 40px;
+                max-width: 600px;
+                width: 100%;
+            }}
+            
+            h1 {{
+                text-align: center;
+                color: #333;
+                margin-bottom: 10px;
+                font-size: 2em;
+            }}
+            
+            .subtitle {{
+                text-align: center;
+                color: #666;
+                margin-bottom: 30px;
+                font-size: 0.9em;
+            }}
+            
+            .status-grid {{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                margin-bottom: 30px;
+            }}
+            
+            .status-card {{
+                background: #f8f9fa;
+                padding: 15px;
+                border-radius: 10px;
+                border-left: 4px solid #667eea;
+            }}
+            
+            .status-card.full-width {{
+                grid-column: 1 / -1;
+            }}
+            
+            .status-label {{
+                font-size: 0.8em;
+                color: #666;
+                margin-bottom: 5px;
+            }}
+            
+            .status-value {{
+                font-size: 1.2em;
+                font-weight: bold;
+                color: #333;
+            }}
+            
+            .trigger-button {{
+                width: 100%;
+                padding: 20px;
+                font-size: 1.5em;
+                font-weight: bold;
+                color: white;
+                background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);
+                margin-bottom: 20px;
+            }}
+            
+            .trigger-button:hover {{
+                transform: translateY(-2px);
+                box-shadow: 0 15px 40px rgba(245, 87, 108, 0.4);
+            }}
+            
+            .trigger-button:active {{
+                transform: translateY(0);
+            }}
+            
+            .trigger-button:disabled {{
+                background: #ccc;
+                cursor: not-allowed;
+                transform: none;
+            }}
+            
+            .message {{
+                padding: 15px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                display: none;
+                animation: slideIn 0.3s ease;
+            }}
+            
+            @keyframes slideIn {{
+                from {{
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }}
+                to {{
+                    opacity: 1;
+                    transform: translateY(0);
+                }}
+            }}
+            
+            .message.success {{
+                background: #d4edda;
+                color: #155724;
+                border-left: 4px solid #28a745;
+            }}
+            
+            .message.error {{
+                background: #f8d7da;
+                color: #721c24;
+                border-left: 4px solid #dc3545;
+            }}
+            
+            .message.info {{
+                background: #d1ecf1;
+                color: #0c5460;
+                border-left: 4px solid #17a2b8;
+            }}
+            
+            .endpoints {{
+                background: #f8f9fa;
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 20px;
+            }}
+            
+            .endpoints h3 {{
+                color: #333;
+                margin-bottom: 15px;
+                font-size: 1.1em;
+            }}
+            
+            .endpoints ul {{
+                list-style: none;
+            }}
+            
+            .endpoints li {{
+                padding: 8px 0;
+                color: #666;
+                font-size: 0.9em;
+            }}
+            
+            .endpoints strong {{
+                color: #667eea;
+            }}
+            
+            .loading-spinner {{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 3px solid rgba(255,255,255,.3);
+                border-radius: 50%;
+                border-top-color: white;
+                animation: spin 1s ease-in-out infinite;
+            }}
+            
+            @keyframes spin {{
+                to {{ transform: rotate(360deg); }}
+            }}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🎥 Sistema Filmaeu</h1>
+            <p class="subtitle">Controle de Gravação e Monitoramento</p>
+            
+            <div class="status-grid">
+                <div class="status-card">
+                    <div class="status-label">FFmpeg</div>
+                    <div class="status-value">{ffmpeg_status}</div>
+                </div>
+                <div class="status-card">
+                    <div class="status-label">Resolução</div>
+                    <div class="status-value">{frame_width}x{frame_height}</div>
+                </div>
+                <div class="status-card">
+                    <div class="status-label">FPS</div>
+                    <div class="status-value">{detected_fps}</div>
+                </div>
+                <div class="status-card">
+                    <div class="status-label">Buffer</div>
+                    <div class="status-value">{BUFFER_SECONDS}s</div>
+                </div>
+                <div class="status-card full-width">
+                    <div class="status-label">Tempo de Gravação</div>
+                    <div class="status-value">{SAVE_SECONDS} segundos</div>
+                </div>
+            </div>
+            
+            <div id="message" class="message"></div>
+            
+            <button id="triggerBtn" class="trigger-button" onclick="triggerRecording()">
+                📹 GRAVAR VÍDEO
+            </button>
+            
+            <div class="endpoints">
+                <h3>📡 Endpoints Disponíveis</h3>
+                <ul>
+                    <li><strong>GET /</strong> - Interface de controle (esta página)</li>
+                    <li><strong>POST /trigger</strong> - Dispara gravação e upload automático</li>
+                    <li><strong>GET /status</strong> - Status detalhado do sistema (JSON)</li>
+                    <li><strong>GET /health</strong> - Verificação de saúde do sistema</li>
+                </ul>
+            </div>
+        </div>
+        
+        <script>
+            let isRecording = false;
+            
+            function showMessage(text, type) {{
+                const messageDiv = document.getElementById('message');
+                messageDiv.textContent = text;
+                messageDiv.className = 'message ' + type;
+                messageDiv.style.display = 'block';
+                
+                if (type === 'success' || type === 'error') {{
+                    setTimeout(() => {{
+                        messageDiv.style.display = 'none';
+                    }}, 5000);
+                }}
+            }}
+            
+            function triggerRecording() {{
+                if (isRecording) return;
+                
+                const btn = document.getElementById('triggerBtn');
+                isRecording = true;
+                btn.disabled = true;
+                btn.innerHTML = '<span class="loading-spinner"></span> GRAVANDO...';
+                
+                showMessage('🎬 Iniciando gravação de {SAVE_SECONDS} segundos...', 'info');
+                
+                fetch('/trigger', {{
+                    method: 'POST',
+                    headers: {{
+                        'Content-Type': 'application/json'
+                    }}
+                }})
+                .then(response => response.json())
+                .then(data => {{
+                    if (data.status === 'success') {{
+                        showMessage('✅ ' + data.message + ' (Arquivo: ' + data.filename + ')', 'success');
+                    }} else {{
+                        showMessage('❌ Erro: ' + (data.error || data.message), 'error');
+                    }}
+                }})
+                .catch(error => {{
+                    showMessage('❌ Erro de conexão: ' + error.message, 'error');
+                }})
+                .finally(() => {{
+                    isRecording = false;
+                    btn.disabled = false;
+                    btn.innerHTML = '📹 GRAVAR VÍDEO';
+                }});
+            }}
+            
+            // Atalho de teclado: Espaço para gravar
+            document.addEventListener('keydown', function(event) {{
+                if (event.code === 'Space' && !isRecording) {{
+                    event.preventDefault();
+                    triggerRecording();
+                }}
+            }});
+            
+            // Atualiza o status a cada 30 segundos
+            setInterval(() => {{
+                fetch('/status')
+                    .then(response => response.json())
+                    .then(data => {{
+                        console.log('Status atualizado:', data);
+                    }})
+                    .catch(error => {{
+                        console.error('Erro ao atualizar status:', error);
+                    }});
+            }}, 30000);
+        </script>
+    </body>
+    </html>
     """
 
 @app.route('/status', methods=['GET'])

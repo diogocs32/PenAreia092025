@@ -80,3 +80,35 @@
 2025-10-16 00:17:13,220 - __main__ - INFO - ✅ Webhook enviado: Penareia_16-10-2025_00-17-06.mp4
 2025-10-16 00:19:02,805 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
 2025-10-16 00:19:02,805 - __main__ - INFO - 🧹 Limpando recursos...
+2025-10-16 16:23:22,891 - __main__ - INFO - 📝 Log reconfigurado: C:\projetopy\PenAreia092025\logs\penareia.log
+2025-10-16 16:23:22,893 - __main__ - INFO - ✅ Banco de dados inicializado
+2025-10-16 16:23:23,166 - __main__ - INFO - ✅ FFmpeg configurado: .\ffmpeg.EXE
+2025-10-16 16:23:23,166 - __main__ - INFO - 📤 Thread de upload iniciada
+2025-10-16 16:23:23,166 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 16:23:23,167 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 16:23:23,167 - __main__ - INFO - 🎥 Iniciando captura (tentativa 1)
+2025-10-16 16:23:23,167 - __main__ - INFO - 🎥 Thread de captura iniciada
+2025-10-16 16:23:26,168 - __main__ - INFO - 🚀 Servidor Flask: 0.0.0.0:5000
+2025-10-16 16:23:26,177 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.86.78:5000
+2025-10-16 16:23:26,178 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-16 16:23:29,756 - __main__ - INFO - ✅ Conectado à câmera: 640x480 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 16:23:37,613 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 16:23:37] "GET / HTTP/1.1" 200 -
+2025-10-16 16:23:55,931 - __main__ - INFO - 📋 Adicionando vídeo à queue de upload...
+2025-10-16 16:23:55,940 - __main__ - INFO - 📋 Arquivo adicionado à queue: Penareia_16-10-2025_16-23-55.mp4
+2025-10-16 16:23:55,940 - __main__ - INFO - 🔄 Processando upload: Penareia_16-10-2025_16-23-55.mp4
+2025-10-16 16:23:55,940 - __main__ - INFO - ✅ Vídeo adicionado à queue com sucesso!
+2025-10-16 16:23:55,940 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 16:23:55] "POST /trigger HTTP/1.1" 200 -
+2025-10-16 16:23:57,665 - __main__ - INFO - 🔄 Upload tentativa 1: Penareia_16-10-2025_16-23-55.mp4
+2025-10-16 16:24:01,064 - __main__ - INFO - ✅ Upload concluído: Penareia_16-10-2025_16-23-55.mp4
+2025-10-16 16:24:01,065 - __main__ - INFO - 🗑️ Arquivo local removido: videos/final/Penareia_16-10-2025_16-23-55.mp4
+2025-10-16 16:24:02,225 - __main__ - INFO - ✅ Webhook enviado: Penareia_16-10-2025_16-23-55.mp4
+2025-10-16 16:24:07,703 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 16:24:07] "GET /status HTTP/1.1" 200 -
+2025-10-16 16:24:38,021 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 16:24:38] "GET /status HTTP/1.1" 200 -
+2025-10-16 16:25:08,237 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 16:25:08] "GET /status HTTP/1.1" 200 -
+2025-10-16 16:25:38,540 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 16:25:38] "GET /status HTTP/1.1" 200 -
+2025-10-16 16:26:08,233 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 16:26:08] "GET /status HTTP/1.1" 200 -
+2025-10-16 16:26:26,582 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
+2025-10-16 16:26:26,582 - __main__ - INFO - 🧹 Limpando recursos...
