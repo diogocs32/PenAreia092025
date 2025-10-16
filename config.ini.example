@@ -1,0 +1,42 @@
+# Exemplo de configurações alternativas para o config.ini
+
+[VIDEO]
+# Para câmera USB local (exemplo)
+# SOURCE = 0
+
+# Para arquivo de vídeo de teste (exemplo)
+# SOURCE = test_video.mp4
+
+# Para outra câmera IP (exemplo)
+# SOURCE = rtsp://user:password@192.168.1.100:554/stream
+
+# Configurações de buffer e gravação
+BUFFER_SECONDS = 30  # Aumentar para buffer maior
+SAVE_SECONDS = 25    # Deve ser menor ou igual ao BUFFER_SECONDS
+
+[WEBHOOK]
+# URL do webhook para desenvolvimento local
+# URL = http://localhost:3000/webhook
+
+# URL do webhook de produção
+URL = https://penareiabeach.com.br/webhook.php
+
+[BACKBLAZE_B2]
+# Suas credenciais do Backblaze B2
+KEY_ID = your_key_id_here
+APPLICATION_KEY = your_application_key_here
+BUCKET_NAME = your_bucket_name_here
+
+[SERVER]
+# Configurações do servidor Flask
+HOST = 0.0.0.0       # 0.0.0.0 para acesso externo, 127.0.0.1 apenas local
+PORT = 5000           # Porta do servidor
+DEBUG = True          # True para desenvolvimento, False para produção
+
+[VIDEO_ENCODING]
+# Configurações de qualidade de vídeo
+CODEC = libx264       # Codec de vídeo (libx264, libx265)
+AUDIO_CODEC = aac     # Codec de áudio (aac, mp3)
+PRESET = fast         # Velocidade de encoding (ultrafast, fast, medium, slow)
+CRF = 23             # Qualidade (18=alta qualidade, 28=baixa qualidade)
+PIXEL_FORMAT = yuv420p # Formato de pixel para compatibilidade

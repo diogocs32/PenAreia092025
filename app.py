@@ -9,21 +9,44 @@ from datetime import datetime
 import requests
 import ffmpeg
 import subprocess
+import configparser
 
 app = Flask(__name__)
 
+# === CARREGAMENTO DAS CONFIGURAÇÕES ===
+config = configparser.ConfigParser()
+config.read('config.ini')
+
 # === CONFIGURAÇÕES GLOBAIS ===
-VIDEO_SOURCE = "rtsp://admin:130906gu@192.168.1.35:554/cam/realmonitor?channel=1&subtype=0"
-BUFFER_SECONDS = 25
-SAVE_SECONDS = 20  # Garanta que seja menor ou igual ao BUFFER_SECONDS
+# Converte fonte de vídeo: se for número (webcam), converte para int, senão mantém como string (RTSP)
+video_source_str = config.get('VIDEO', 'SOURCE')
+try:
+    VIDEO_SOURCE = int(video_source_str)  # Webcam (0, 1, 2...)
+except ValueError:
+    VIDEO_SOURCE = video_source_str  # RTSP ou arquivo de vídeo
+
+BUFFER_SECONDS = config.getint('VIDEO', 'BUFFER_SECONDS')
+SAVE_SECONDS = config.getint('VIDEO', 'SAVE_SECONDS')
 
 # === CONFIGURAÇÃO DO WEBHOOK ===
-WEBHOOK_URL = "https://penareiabeach.com.br/webhook.php"  # SUBSTITUA PELA URL DO SEU WEBHOOK
+WEBHOOK_URL = config.get('WEBHOOK', 'URL')
 
 # === CONFIGURAÇÕES DO BACKBLAZE B2 ===
-B2_KEY_ID = "00520485e1dad130000000005"  # Substitua pelas suas credenciais
-B2_APPLICATION_KEY = "K005XAe5NAO3Ha/reEoZo9q8kW59Tqg"  # Substitua pelas suas credenciais
-B2_BUCKET_NAME = "penareiabaldev4"  # Substitua pelo nome do seu bucket
+B2_KEY_ID = config.get('BACKBLAZE_B2', 'KEY_ID')
+B2_APPLICATION_KEY = config.get('BACKBLAZE_B2', 'APPLICATION_KEY')
+B2_BUCKET_NAME = config.get('BACKBLAZE_B2', 'BUCKET_NAME')
+
+# === CONFIGURAÇÕES DO SERVIDOR ===
+SERVER_HOST = config.get('SERVER', 'HOST')
+SERVER_PORT = config.getint('SERVER', 'PORT')
+SERVER_DEBUG = config.getboolean('SERVER', 'DEBUG')
+
+# === CONFIGURAÇÕES DE CODIFICAÇÃO ===
+VIDEO_CODEC = config.get('VIDEO_ENCODING', 'CODEC')
+AUDIO_CODEC = config.get('VIDEO_ENCODING', 'AUDIO_CODEC')
+ENCODING_PRESET = config.get('VIDEO_ENCODING', 'PRESET')
+ENCODING_CRF = config.getint('VIDEO_ENCODING', 'CRF')
+PIXEL_FORMAT = config.get('VIDEO_ENCODING', 'PIXEL_FORMAT')
 
 # === VARIÁVEIS GLOBAIS PARA PROPRIEDADES DETECTADAS ===
 detected_fps = 30.0  # Valor padrão
@@ -56,11 +79,11 @@ def convert_video_with_ffmpeg(input_path, output_path):
         stream = ffmpeg.output(
             stream,
             output_path,
-            vcodec='libx264',  # Codec H.264 para compatibilidade
-            acodec='aac',      # Codec de áudio AAC
-            preset='fast',     # Preset rápido para conversão
-            crf=23,           # Qualidade (18-28, onde 23 é boa qualidade)
-            pix_fmt='yuv420p', # Formato de pixel compatível
+            vcodec=VIDEO_CODEC,  # Codec de vídeo do config
+            acodec=AUDIO_CODEC,  # Codec de áudio do config
+            preset=ENCODING_PRESET,  # Preset do config
+            crf=ENCODING_CRF,    # Qualidade do config
+            pix_fmt=PIXEL_FORMAT, # Formato de pixel do config
             movflags='faststart',  # Para streaming web
             r=detected_fps,    # Taxa de frames
             s=f'{frame_width}x{frame_height}',  # Resolução
@@ -90,11 +113,11 @@ def convert_video_subprocess(input_path, output_path):
         cmd = [
             'ffmpeg',
             '-i', input_path,
-            '-c:v', 'libx264',     # Codec de vídeo H.264
-            '-preset', 'fast',      # Preset de velocidade
-            '-crf', '23',          # Qualidade
-            '-c:a', 'aac',         # Codec de áudio
-            '-pix_fmt', 'yuv420p', # Formato de pixel
+            '-c:v', VIDEO_CODEC,     # Codec de vídeo do config
+            '-preset', ENCODING_PRESET,  # Preset do config
+            '-crf', str(ENCODING_CRF),   # Qualidade do config
+            '-c:a', AUDIO_CODEC,     # Codec de áudio do config
+            '-pix_fmt', PIXEL_FORMAT, # Formato de pixel do config
             '-movflags', 'faststart', # Para web streaming
             '-y',                  # Sobrescrever arquivo existente
             output_path
@@ -449,5 +472,5 @@ if __name__ == '__main__':
     time.sleep(2)
     
     # Inicia servidor Flask
-    print("🚀 Iniciando servidor Flask na porta 5000...")
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    print(f"🚀 Iniciando servidor Flask em {SERVER_HOST}:{SERVER_PORT}...")
+    app.run(host=SERVER_HOST, port=SERVER_PORT, debug=SERVER_DEBUG)
