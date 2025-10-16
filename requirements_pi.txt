@@ -1,0 +1,5 @@
+# Dependências adicionais para Raspberry Pi
+zeroconf==0.47.4
+psutil==5.9.6
+RPi.GPIO==0.7.1
+picamera2==0.3.12

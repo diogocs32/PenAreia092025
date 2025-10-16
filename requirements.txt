@@ -18,3 +18,10 @@ python-dateutil==2.8.2
 logfury==1.0.1
 arrow==1.2.3
 tqdm==4.66.1
+ffmpeg-python==0.2.0
+future==1.0.0
+
+# Dependências opcionais para Raspberry Pi
+# Instale com: pip install -r requirements_pi.txt
+zeroconf>=0.47.4
+psutil>=5.9.6

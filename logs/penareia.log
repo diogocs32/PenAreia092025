@@ -1,0 +1,82 @@
+2025-10-16 00:05:28,412 - __main__ - INFO - 📝 Log reconfigurado: C:\projetopy\PenAreia092025\logs\penareia.log
+2025-10-16 00:05:28,418 - __main__ - INFO - ✅ Banco de dados inicializado
+2025-10-16 00:05:28,440 - __main__ - INFO - ✅ FFmpeg configurado: .\ffmpeg.EXE
+2025-10-16 00:05:28,441 - __main__ - INFO - 📤 Thread de upload iniciada
+2025-10-16 00:05:28,441 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 00:05:28,441 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 00:05:28,441 - __main__ - INFO - 🎥 Iniciando captura (tentativa 1)
+2025-10-16 00:05:28,441 - __main__ - INFO - 🎥 Thread de captura iniciada
+2025-10-16 00:05:31,442 - __main__ - INFO - 🚀 Servidor Flask: 0.0.0.0:5000
+2025-10-16 00:05:31,460 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.15.8:5000
+2025-10-16 00:05:31,460 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-16 00:05:34,989 - __main__ - INFO - ✅ Conectado à câmera: 640x480 @ 30.00 FPS. Buffer de 30s.
+2025-10-16 00:06:29,648 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 00:06:29] "GET / HTTP/1.1" 200 -
+2025-10-16 00:06:36,690 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 00:06:36] "GET / HTTP/1.1" 200 -
+2025-10-16 00:09:26,587 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
+2025-10-16 00:09:26,587 - __main__ - INFO - 🧹 Limpando recursos...
+2025-10-16 00:10:21,692 - __main__ - INFO - 📝 Log reconfigurado: C:\projetopy\PenAreia092025\logs\penareia.log
+2025-10-16 00:10:21,693 - __main__ - INFO - ✅ Banco de dados inicializado
+2025-10-16 00:10:21,711 - __main__ - INFO - ✅ FFmpeg configurado: .\ffmpeg.EXE
+2025-10-16 00:10:21,711 - __main__ - INFO - 📤 Thread de upload iniciada
+2025-10-16 00:10:21,711 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 00:10:21,711 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 00:10:21,712 - __main__ - INFO - 🎥 Iniciando captura (tentativa 1)
+2025-10-16 00:10:21,712 - __main__ - INFO - 🎥 Thread de captura iniciada
+2025-10-16 00:10:24,713 - __main__ - INFO - 🚀 Servidor Flask: 0.0.0.0:5000
+2025-10-16 00:10:24,728 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.15.8:5000
+2025-10-16 00:10:24,728 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-16 00:10:28,082 - __main__ - INFO - ✅ Conectado à câmera: 640x480 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 00:12:19,372 - __main__ - INFO - 📋 Adicionando vídeo à queue de upload...
+2025-10-16 00:12:19,379 - __main__ - INFO - 📋 Arquivo adicionado à queue: Penareia_16-10-2025_00-12-18.mp4
+2025-10-16 00:12:19,379 - __main__ - INFO - 🔄 Processando upload: Penareia_16-10-2025_00-12-18.mp4
+2025-10-16 00:12:19,379 - __main__ - INFO - ✅ Vídeo adicionado à queue com sucesso!
+2025-10-16 00:12:19,380 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 00:12:19] "POST /trigger HTTP/1.1" 200 -
+2025-10-16 00:12:20,964 - __main__ - INFO - 🔄 Upload tentativa 1: Penareia_16-10-2025_00-12-18.mp4
+2025-10-16 00:12:24,825 - __main__ - INFO - ✅ Upload concluído: Penareia_16-10-2025_00-12-18.mp4
+2025-10-16 00:12:24,826 - __main__ - INFO - 🗑️ Arquivo local removido: videos/final/Penareia_16-10-2025_00-12-18.mp4
+2025-10-16 00:12:24,829 - __main__ - ERROR - ❌ Erro ao marcar upload como concluído: no such column: total_uploads
+2025-10-16 00:12:25,859 - __main__ - INFO - ✅ Webhook enviado: Penareia_16-10-2025_00-12-18.mp4
+2025-10-16 00:12:30,312 - __main__ - ERROR - ❌ Erro ao atualizar heartbeat: database is locked
+2025-10-16 00:12:30,328 - __main__ - ERROR - ❌ Erro ao atualizar heartbeat: database is locked
+2025-10-16 00:12:35,810 - __main__ - ERROR - ❌ Erro ao atualizar heartbeat: database is locked
+2025-10-16 00:12:41,300 - __main__ - ERROR - ❌ Erro ao atualizar heartbeat: database is locked
+2025-10-16 00:12:46,777 - __main__ - ERROR - ❌ Erro ao atualizar heartbeat: database is locked
+2025-10-16 00:12:52,295 - __main__ - ERROR - ❌ Erro ao atualizar heartbeat: database is locked
+2025-10-16 00:12:57,781 - __main__ - ERROR - ❌ Erro ao atualizar heartbeat: database is locked
+2025-10-16 00:13:03,287 - __main__ - ERROR - ❌ Erro ao atualizar heartbeat: database is locked
+2025-10-16 00:13:06,755 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
+2025-10-16 00:13:06,755 - __main__ - INFO - 🧹 Limpando recursos...
+2025-10-16 00:16:29,730 - __main__ - INFO - 📝 Log reconfigurado: C:\projetopy\PenAreia092025\logs\penareia.log
+2025-10-16 00:16:29,746 - __main__ - INFO - ✅ Banco de dados inicializado
+2025-10-16 00:16:29,764 - __main__ - INFO - ✅ FFmpeg configurado: .\ffmpeg.EXE
+2025-10-16 00:16:29,764 - __main__ - INFO - 📤 Thread de upload iniciada
+2025-10-16 00:16:29,764 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 00:16:29,764 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 00:16:29,764 - __main__ - INFO - 🎥 Iniciando captura (tentativa 1)
+2025-10-16 00:16:29,764 - __main__ - INFO - 🎥 Thread de captura iniciada
+2025-10-16 00:16:32,766 - __main__ - INFO - 🚀 Servidor Flask: 0.0.0.0:5000
+2025-10-16 00:16:32,783 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.15.8:5000
+2025-10-16 00:16:32,783 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-16 00:16:36,108 - __main__ - INFO - ✅ Conectado à câmera: 640x480 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 00:16:45,309 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 00:16:45] "GET / HTTP/1.1" 200 -
+2025-10-16 00:16:55,229 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 00:16:55] "GET / HTTP/1.1" 200 -
+2025-10-16 00:17:07,123 - __main__ - INFO - 📋 Adicionando vídeo à queue de upload...
+2025-10-16 00:17:07,130 - __main__ - INFO - 📋 Arquivo adicionado à queue: Penareia_16-10-2025_00-17-06.mp4
+2025-10-16 00:17:07,130 - __main__ - INFO - 🔄 Processando upload: Penareia_16-10-2025_00-17-06.mp4
+2025-10-16 00:17:07,130 - __main__ - INFO - ✅ Vídeo adicionado à queue com sucesso!
+2025-10-16 00:17:07,131 - werkzeug - INFO - 127.0.0.1 - - [16/Oct/2025 00:17:07] "POST /trigger HTTP/1.1" 200 -
+2025-10-16 00:17:08,685 - __main__ - INFO - 🔄 Upload tentativa 1: Penareia_16-10-2025_00-17-06.mp4
+2025-10-16 00:17:12,064 - __main__ - INFO - ✅ Upload concluído: Penareia_16-10-2025_00-17-06.mp4
+2025-10-16 00:17:12,064 - __main__ - INFO - 🗑️ Arquivo local removido: videos/final/Penareia_16-10-2025_00-17-06.mp4
+2025-10-16 00:17:13,220 - __main__ - INFO - ✅ Webhook enviado: Penareia_16-10-2025_00-17-06.mp4
+2025-10-16 00:19:02,805 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
+2025-10-16 00:19:02,805 - __main__ - INFO - 🧹 Limpando recursos...
