@@ -416,58 +416,85 @@ def convert_video_with_ffmpeg(input_path, output_path):
 # === FUNÇÃO ALTERNATIVA COM SUBPROCESS ===
 def convert_video_subprocess(input_path, output_path):
     """Converte vídeo usando subprocess (alternativa se ffmpeg-python falhar)"""
-    try:
-        print(f"Convertendo vídeo (subprocess): {input_path} -> {output_path}")
-        
-        # Usa comando FFmpeg global detectado
-        ffmpeg_cmd = FFMPEG_CMD
-        
-        cmd = [
-            ffmpeg_cmd,
-            '-i', input_path,
-            '-c:v', VIDEO_CODEC,
-            '-preset', ENCODING_PRESET, 
-            '-crf', str(ENCODING_CRF),
-            '-c:a', AUDIO_CODEC,
-            '-pix_fmt', PIXEL_FORMAT,
-            '-movflags', 'faststart',
-            '-y'
+    
+    # Lista de codecs para tentar em ordem de preferência
+    codec_attempts = []
+    
+    if IS_RASPBERRY_PI or IS_ARM:
+        # Raspberry Pi: Tentar hardware primeiro, depois software
+        codec_attempts = [
+            ('h264_v4l2m2m', 'Hardware encoder (v4l2m2m)'),
+            ('h264_omx', 'Hardware encoder (OMX)'),
+            ('libx264', 'Software encoder (libx264)')
         ]
-        
-        # Otimizações para ARM/Raspberry Pi
-        if IS_RASPBERRY_PI or IS_ARM:
-            cmd.extend([
-                '-tune', ENCODING_TUNE,
-                '-threads', str(ENCODING_THREADS),
-                '-g', str(detected_fps * 2),
-                '-sc_threshold', '0',
-                '-profile:v', 'baseline',
-                '-level', '3.1'
-            ])
+    else:
+        # Windows/Linux: usar software encoder
+        codec_attempts = [
+            ('libx264', 'Software encoder (libx264)')
+        ]
+    
+    last_error = None
+    
+    for codec, codec_desc in codec_attempts:
+        try:
+            print(f"🔄 Tentando codec: {codec} ({codec_desc})")
             
-            # Hardware acceleration se disponível
-            if USE_GPU:
-                try:
-                    cmd[cmd.index('-c:v') + 1] = 'h264_v4l2m2m'
-                except:
-                    pass
-        
-        cmd.append(output_path)
-        
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        
-        if result.returncode == 0:
-            print(f"✅ Conversão subprocess concluída: {output_path}")
-            return True, "Conversão bem-sucedida"
-        else:
-            error_msg = f"Erro subprocess FFmpeg: {result.stderr}"
-            print(f"❌ {error_msg}")
-            return False, error_msg
+            # Usa comando FFmpeg global detectado
+            ffmpeg_cmd = FFMPEG_CMD
             
-    except Exception as e:
-        error_msg = f"Erro no subprocess: {e}"
-        print(f"❌ {error_msg}")
-        return False, error_msg
+            cmd = [
+                ffmpeg_cmd,
+                '-i', input_path,
+                '-c:v', codec,
+                '-preset', ENCODING_PRESET if codec == 'libx264' else 'medium',
+                '-crf', str(ENCODING_CRF) if codec == 'libx264' else '23',
+                '-c:a', AUDIO_CODEC,
+                '-pix_fmt', PIXEL_FORMAT,
+                '-movflags', 'faststart',
+                '-y'
+            ]
+            
+            # Otimizações específicas para libx264
+            if codec == 'libx264':
+                cmd.extend([
+                    '-profile:v', 'baseline',
+                    '-level', '3.1'
+                ])
+                
+                if IS_RASPBERRY_PI or IS_ARM:
+                    cmd.extend([
+                        '-tune', ENCODING_TUNE,
+                        '-threads', str(ENCODING_THREADS),
+                        '-g', str(detected_fps * 2),
+                        '-sc_threshold', '0'
+                    ])
+            
+            cmd.append(output_path)
+            
+            # Executar conversão
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+            
+            if result.returncode == 0:
+                print(f"✅ Conversão subprocess concluída com {codec}: {output_path}")
+                return True, f"Conversão bem-sucedida com {codec}"
+            else:
+                last_error = result.stderr
+                print(f"⚠️ Codec {codec} falhou, tentando próximo...")
+                continue
+                
+        except subprocess.TimeoutExpired:
+            last_error = f"Timeout na conversão com {codec}"
+            print(f"⚠️ {last_error}, tentando próximo codec...")
+            continue
+        except Exception as e:
+            last_error = str(e)
+            print(f"⚠️ Erro com codec {codec}: {e}, tentando próximo...")
+            continue
+    
+    # Se chegou aqui, todos os codecs falharam
+    error_msg = f"Todos os codecs falharam. Último erro: {last_error}"
+    print(f"❌ {error_msg}")
+    return False, error_msg
 
 # === FUNÇÃO PARA ENVIAR DADOS PARA O WEBHOOK ASSÍNCRONO ===
 def send_to_webhook_async(arquivo, url, data_hora):
