@@ -28,13 +28,399 @@
 2025-10-16 00:16:29,730 - __main__ - INFO -    • Resolução máxima: 1280x720
 2025-10-16 00:16:29,730 - __main__ - INFO -    • Webhook: https://penareiabeach.com.br/webhook.php
 2025-10-16 00:16:29,730 - __main__ - INFO -    • Bucket B2: penareiabaldev4
-2025-10-16 16:23:22,890 - __main__ - INFO - 🎬 === INICIANDO SERVIDOR FLASK FILMAEU ===
-2025-10-16 16:23:22,890 - __main__ - INFO - 🖥️ Plataforma: Windows AMD64
-2025-10-16 16:23:22,890 - __main__ - INFO - 📋 Configurações:
-2025-10-16 16:23:22,890 - __main__ - INFO -    • Vídeo fonte: 0
-2025-10-16 16:23:22,890 - __main__ - INFO -    • Buffer: 25s
-2025-10-16 16:23:22,890 - __main__ - INFO -    • Gravação: 20s
-2025-10-16 16:23:22,890 - __main__ - INFO -    • FPS forçado: 24
-2025-10-16 16:23:22,890 - __main__ - INFO -    • Resolução máxima: 1280x720
-2025-10-16 16:23:22,890 - __main__ - INFO -    • Webhook: https://penareiabeach.com.br/webhook.php
-2025-10-16 16:23:22,891 - __main__ - INFO -    • Bucket B2: penareiabaldev4
+2025-10-16 14:37:58,811 - __main__ - INFO - 🎬 === INICIANDO SERVIDOR FLASK FILMAEU ===
+2025-10-16 14:37:58,813 - __main__ - INFO - 🖥️ Plataforma: Linux aarch64
+2025-10-16 14:37:58,814 - __main__ - INFO - 🍓 Modo Raspberry Pi ativado com otimizações ARM
+2025-10-16 14:37:58,815 - __main__ - INFO - 📋 Configurações:
+2025-10-16 14:37:58,817 - __main__ - INFO -    • Vídeo fonte: 0
+2025-10-16 14:37:58,818 - __main__ - INFO -    • Buffer: 25s
+2025-10-16 14:37:58,819 - __main__ - INFO -    • Gravação: 20s
+2025-10-16 14:37:58,820 - __main__ - INFO -    • FPS forçado: 24
+2025-10-16 14:37:58,821 - __main__ - INFO -    • Resolução máxima: 1280x720
+2025-10-16 14:37:58,822 - __main__ - INFO -    • Webhook: https://penareiabeach.com.br/webhook.php
+2025-10-16 14:37:58,824 - __main__ - INFO -    • Bucket B2: penareiabaldev4
+2025-10-16 14:37:58,825 - __main__ - WARNING - ⚠️ Não foi possível reconfigurar logging: [Errno 13] Permission denied: '/var/log/penareia.log'
+2025-10-16 14:37:58,826 - __main__ - ERROR - ❌ Erro ao inicializar banco de dados: [Errno 13] Permission denied: '/var/lib/penareia'
+2025-10-16 14:38:00,885 - __main__ - INFO - ✅ FFmpeg configurado: /usr/bin/ffmpeg
+2025-10-16 14:38:01,702 - __main__ - INFO - 📤 Thread de upload iniciada
+2025-10-16 14:38:01,711 - __main__ - ERROR - ❌ Erro ao recuperar uploads pendentes: unable to open database file
+2025-10-16 14:38:01,712 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 14:38:01,712 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 14:38:01,716 - __main__ - INFO - 🎥 Iniciando captura (tentativa 1)
+2025-10-16 14:38:01,716 - __main__ - INFO - 🎥 Thread de captura iniciada
+2025-10-16 14:38:02,330 - __main__ - ERROR - ❌ Erro ao conectar na fonte de vídeo: 0
+2025-10-16 14:38:06,719 - __main__ - INFO - 🚀 Servidor Flask: 0.0.0.0:5000
+2025-10-16 14:38:06,722 - __main__ - INFO - 📱 mDNS: PenAreia-Camera.local:5000
+2025-10-16 14:38:06,739 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.86.77:5000
+2025-10-16 14:38:06,748 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-16 14:38:07,331 - __main__ - INFO - 🎥 Iniciando captura (tentativa 2)
+2025-10-16 14:38:07,599 - __main__ - ERROR - ❌ Erro ao conectar na fonte de vídeo: 0
+2025-10-16 14:38:12,601 - __main__ - INFO - 🎥 Iniciando captura (tentativa 3)
+2025-10-16 14:38:12,863 - __main__ - ERROR - ❌ Erro ao conectar na fonte de vídeo: 0
+2025-10-16 14:38:17,865 - __main__ - INFO - 🎥 Iniciando captura (tentativa 4)
+2025-10-16 14:38:18,120 - __main__ - ERROR - ❌ Erro ao conectar na fonte de vídeo: 0
+2025-10-16 14:38:20,332 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
+2025-10-16 14:38:20,333 - __main__ - INFO - 🧹 Limpando recursos...
+2025-10-16 14:38:20,588 - __main__ - INFO - 📡 mDNS encerrado
+2025-10-16 15:58:17,729 - __main__ - INFO - 🎬 === INICIANDO SERVIDOR FLASK FILMAEU ===
+2025-10-16 15:58:17,730 - __main__ - INFO - 🖥️ Plataforma: Linux aarch64
+2025-10-16 15:58:17,731 - __main__ - INFO - 🍓 Modo Raspberry Pi ativado com otimizações ARM
+2025-10-16 15:58:17,731 - __main__ - INFO - 📋 Configurações:
+2025-10-16 15:58:17,732 - __main__ - INFO -    • Vídeo fonte: rtsp://admin:diogo1327@192.168.86.79:554/cam/realmonitor?channel=1&subtype=0
+2025-10-16 15:58:17,733 - __main__ - INFO -    • Buffer: 25s
+2025-10-16 15:58:17,733 - __main__ - INFO -    • Gravação: 20s
+2025-10-16 15:58:17,734 - __main__ - INFO -    • FPS forçado: 24
+2025-10-16 15:58:17,734 - __main__ - INFO -    • Resolução máxima: 1280x720
+2025-10-16 15:58:17,735 - __main__ - INFO -    • Webhook: https://penareiabeach.com.br/webhook.php
+2025-10-16 15:58:17,735 - __main__ - INFO -    • Bucket B2: penareiabaldev4
+2025-10-16 15:58:17,736 - __main__ - WARNING - ⚠️ Não foi possível reconfigurar logging: [Errno 13] Permission denied: '/var/log/penareia.log'
+2025-10-16 15:58:17,737 - __main__ - ERROR - ❌ Erro ao inicializar banco de dados: [Errno 13] Permission denied: '/var/lib/penareia'
+2025-10-16 15:58:18,155 - __main__ - INFO - ✅ FFmpeg configurado: /usr/bin/ffmpeg
+2025-10-16 15:58:18,969 - __main__ - INFO - 📤 Thread de upload iniciada
+2025-10-16 15:58:18,969 - __main__ - ERROR - ❌ Erro ao recuperar uploads pendentes: unable to open database file
+2025-10-16 15:58:18,970 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 15:58:18,971 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 15:58:18,972 - __main__ - INFO - 🎥 Iniciando captura (tentativa 1)
+2025-10-16 15:58:18,973 - __main__ - INFO - 🎥 Thread de captura iniciada
+2025-10-16 15:58:20,237 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 15:58:23,974 - __main__ - INFO - 🚀 Servidor Flask: 0.0.0.0:5000
+2025-10-16 15:58:23,977 - __main__ - INFO - 📱 mDNS: PenAreia-Camera.local:5000
+2025-10-16 15:58:23,987 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.86.77:5000
+2025-10-16 15:58:23,989 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-16 15:58:39,512 - __main__ - ERROR - ❌ Erro na captura: OpenCV(4.6.0) ./modules/core/src/alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 6220800 bytes in function 'OutOfMemoryError'
+
+2025-10-16 15:58:39,518 - __main__ - INFO - 🔄 Tentando reconectar em 5 segundos... (1/10)
+2025-10-16 15:58:44,519 - __main__ - INFO - 🎥 Iniciando captura (tentativa 2)
+2025-10-16 15:58:46,160 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 15:59:04,890 - __main__ - ERROR - ❌ Erro na captura: OpenCV(4.6.0) ./modules/core/src/alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 6220800 bytes in function 'OutOfMemoryError'
+
+2025-10-16 15:59:04,907 - __main__ - INFO - 🔄 Tentando reconectar em 5 segundos... (1/10)
+2025-10-16 15:59:09,909 - __main__ - INFO - 🎥 Iniciando captura (tentativa 2)
+2025-10-16 15:59:11,533 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 15:59:30,248 - __main__ - ERROR - ❌ Erro na captura: OpenCV(4.6.0) ./modules/core/src/alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 6220800 bytes in function 'OutOfMemoryError'
+
+2025-10-16 15:59:30,285 - __main__ - INFO - 🔄 Tentando reconectar em 5 segundos... (1/10)
+2025-10-16 15:59:35,287 - __main__ - INFO - 🎥 Iniciando captura (tentativa 2)
+2025-10-16 15:59:36,927 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 15:59:55,613 - __main__ - ERROR - ❌ Erro na captura: OpenCV(4.6.0) ./modules/core/src/alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 6220800 bytes in function 'OutOfMemoryError'
+
+2025-10-16 15:59:55,621 - __main__ - INFO - 🔄 Tentando reconectar em 5 segundos... (1/10)
+2025-10-16 16:00:00,623 - __main__ - INFO - 🎥 Iniciando captura (tentativa 2)
+2025-10-16 16:00:02,244 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 16:00:20,933 - __main__ - ERROR - ❌ Erro na captura: OpenCV(4.6.0) ./modules/core/src/alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 6220800 bytes in function 'OutOfMemoryError'
+
+2025-10-16 16:00:20,946 - __main__ - INFO - 🔄 Tentando reconectar em 5 segundos... (1/10)
+2025-10-16 16:00:25,948 - __main__ - INFO - 🎥 Iniciando captura (tentativa 2)
+2025-10-16 16:00:27,571 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 16:00:36,268 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
+2025-10-16 16:00:36,273 - __main__ - INFO - 🧹 Limpando recursos...
+2025-10-16 16:00:36,535 - __main__ - INFO - 📡 mDNS encerrado
+2025-10-16 16:00:43,978 - __main__ - INFO - 🎬 === INICIANDO SERVIDOR FLASK FILMAEU ===
+2025-10-16 16:00:43,980 - __main__ - INFO - 🖥️ Plataforma: Linux aarch64
+2025-10-16 16:00:43,982 - __main__ - INFO - 🍓 Modo Raspberry Pi ativado com otimizações ARM
+2025-10-16 16:00:43,983 - __main__ - INFO - 📋 Configurações:
+2025-10-16 16:00:43,985 - __main__ - INFO -    • Vídeo fonte: rtsp://admin:diogo1327@192.168.86.79:554/cam/realmonitor?channel=1&subtype=0
+2025-10-16 16:00:43,986 - __main__ - INFO -    • Buffer: 25s
+2025-10-16 16:00:43,988 - __main__ - INFO -    • Gravação: 20s
+2025-10-16 16:00:43,989 - __main__ - INFO -    • FPS forçado: 24
+2025-10-16 16:00:43,991 - __main__ - INFO -    • Resolução máxima: 1280x720
+2025-10-16 16:00:43,992 - __main__ - INFO -    • Webhook: https://penareiabeach.com.br/webhook.php
+2025-10-16 16:00:43,994 - __main__ - INFO -    • Bucket B2: penareiabaldev4
+2025-10-16 16:00:43,995 - __main__ - WARNING - ⚠️ Não foi possível reconfigurar logging: [Errno 13] Permission denied: '/var/log/penareia.log'
+2025-10-16 16:00:43,997 - __main__ - ERROR - ❌ Erro ao inicializar banco de dados: [Errno 13] Permission denied: '/var/lib/penareia'
+2025-10-16 16:00:44,414 - __main__ - INFO - ✅ FFmpeg configurado: /usr/bin/ffmpeg
+2025-10-16 16:00:45,230 - __main__ - INFO - 📤 Thread de upload iniciada
+2025-10-16 16:00:45,231 - __main__ - ERROR - ❌ Erro ao recuperar uploads pendentes: unable to open database file
+2025-10-16 16:00:45,233 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 16:00:45,233 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 16:00:45,237 - __main__ - INFO - 🎥 Iniciando captura (tentativa 1)
+2025-10-16 16:00:45,237 - __main__ - INFO - 🎥 Thread de captura iniciada
+2025-10-16 16:00:46,416 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 16:00:48,551 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
+2025-10-16 16:03:55,503 - __main__ - INFO - 🎬 === INICIANDO SERVIDOR FLASK FILMAEU ===
+2025-10-16 16:03:55,504 - __main__ - INFO - 🖥️ Plataforma: Linux aarch64
+2025-10-16 16:03:55,504 - __main__ - INFO - 🍓 Modo Raspberry Pi ativado com otimizações ARM
+2025-10-16 16:03:55,504 - __main__ - INFO - 📋 Configurações:
+2025-10-16 16:03:55,504 - __main__ - INFO -    • Vídeo fonte: rtsp://admin:diogo1327@192.168.86.79:554/cam/realmonitor?channel=1&subtype=0
+2025-10-16 16:03:55,504 - __main__ - INFO -    • Buffer: 25s
+2025-10-16 16:03:55,505 - __main__ - INFO -    • Gravação: 20s
+2025-10-16 16:03:55,505 - __main__ - INFO -    • FPS forçado: 24
+2025-10-16 16:03:55,505 - __main__ - INFO -    • Resolução máxima: 1280x720
+2025-10-16 16:03:55,505 - __main__ - INFO -    • Webhook: https://penareiabeach.com.br/webhook.php
+2025-10-16 16:03:55,505 - __main__ - INFO -    • Bucket B2: penareiabaldev4
+2025-10-16 16:03:55,506 - __main__ - WARNING - ⚠️ Não foi possível reconfigurar logging: [Errno 13] Permission denied: '/var/log/penareia.log'
+2025-10-16 16:03:55,506 - __main__ - ERROR - ❌ Erro ao inicializar banco de dados: [Errno 13] Permission denied: '/var/lib/penareia'
+2025-10-16 16:03:55,922 - __main__ - INFO - ✅ FFmpeg configurado: /usr/bin/ffmpeg
+2025-10-16 16:03:56,734 - __main__ - INFO - 📤 Thread de upload iniciada
+2025-10-16 16:03:56,734 - __main__ - ERROR - ❌ Erro ao recuperar uploads pendentes: unable to open database file
+2025-10-16 16:03:56,735 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 16:03:56,735 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 16:03:56,736 - __main__ - INFO - 🎥 Iniciando captura (tentativa 1)
+2025-10-16 16:03:56,736 - __main__ - INFO - 🎥 Thread de captura iniciada
+2025-10-16 16:03:57,885 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 16:04:01,736 - __main__ - INFO - 🚀 Servidor Flask: 0.0.0.0:5000
+2025-10-16 16:04:01,738 - __main__ - INFO - 📱 mDNS: PenAreia-Camera.local:5000
+2025-10-16 16:04:01,742 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.86.77:5000
+2025-10-16 16:04:01,743 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-16 16:04:21,072 - __main__ - ERROR - ❌ Erro na captura: OpenCV(4.6.0) ./modules/core/src/alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 6220800 bytes in function 'OutOfMemoryError'
+
+2025-10-16 16:04:21,111 - __main__ - INFO - 🔄 Tentando reconectar em 5 segundos... (1/10)
+2025-10-16 16:04:26,111 - __main__ - INFO - 🎥 Iniciando captura (tentativa 2)
+2025-10-16 16:04:27,726 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 16:04:46,492 - __main__ - ERROR - ❌ Erro na captura: OpenCV(4.6.0) ./modules/core/src/alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 6220800 bytes in function 'OutOfMemoryError'
+
+2025-10-16 16:04:46,506 - __main__ - INFO - 🔄 Tentando reconectar em 5 segundos... (1/10)
+2025-10-16 16:04:51,506 - __main__ - INFO - 🎥 Iniciando captura (tentativa 2)
+2025-10-16 16:04:53,144 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 16:05:11,883 - __main__ - ERROR - ❌ Erro na captura: OpenCV(4.6.0) ./modules/core/src/alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 6220800 bytes in function 'OutOfMemoryError'
+
+2025-10-16 16:05:11,899 - __main__ - INFO - 🔄 Tentando reconectar em 5 segundos... (1/10)
+2025-10-16 16:05:16,900 - __main__ - INFO - 🎥 Iniciando captura (tentativa 2)
+2025-10-16 16:05:18,494 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 16:05:37,244 - __main__ - ERROR - ❌ Erro na captura: OpenCV(4.6.0) ./modules/core/src/alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 6220800 bytes in function 'OutOfMemoryError'
+
+2025-10-16 16:05:37,262 - __main__ - INFO - 🔄 Tentando reconectar em 5 segundos... (1/10)
+2025-10-16 16:05:42,263 - __main__ - INFO - 🎥 Iniciando captura (tentativa 2)
+2025-10-16 16:05:43,891 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 16:06:02,641 - __main__ - ERROR - ❌ Erro na captura: OpenCV(4.6.0) ./modules/core/src/alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 6220800 bytes in function 'OutOfMemoryError'
+
+2025-10-16 16:06:02,659 - __main__ - INFO - 🔄 Tentando reconectar em 5 segundos... (1/10)
+2025-10-16 16:06:07,661 - __main__ - INFO - 🎥 Iniciando captura (tentativa 2)
+2025-10-16 16:06:09,319 - __main__ - INFO - ✅ Conectado à câmera: 1280x720 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 16:06:11,217 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
+2025-10-16 16:06:11,221 - __main__ - INFO - 🧹 Limpando recursos...
+2025-10-16 16:06:11,482 - __main__ - INFO - 📡 mDNS encerrado
+2025-10-16 16:08:32,800 - __main__ - INFO - 🎬 === INICIANDO SERVIDOR FLASK FILMAEU ===
+2025-10-16 16:08:32,801 - __main__ - INFO - 🖥️ Plataforma: Linux aarch64
+2025-10-16 16:08:32,802 - __main__ - INFO - 🍓 Modo Raspberry Pi ativado com otimizações ARM
+2025-10-16 16:08:32,802 - __main__ - INFO - 📋 Configurações:
+2025-10-16 16:08:32,803 - __main__ - INFO -    • Vídeo fonte: rtsp://admin:diogo1327@192.168.86.79:554/cam/realmonitor?channel=1&subtype=1
+2025-10-16 16:08:32,803 - __main__ - INFO -    • Buffer: 25s
+2025-10-16 16:08:32,804 - __main__ - INFO -    • Gravação: 20s
+2025-10-16 16:08:32,805 - __main__ - INFO -    • FPS forçado: 24
+2025-10-16 16:08:32,805 - __main__ - INFO -    • Resolução máxima: 1280x720
+2025-10-16 16:08:32,806 - __main__ - INFO -    • Webhook: https://penareiabeach.com.br/webhook.php
+2025-10-16 16:08:32,806 - __main__ - INFO -    • Bucket B2: penareiabaldev4
+2025-10-16 16:08:32,807 - __main__ - WARNING - ⚠️ Não foi possível reconfigurar logging: [Errno 13] Permission denied: '/var/log/penareia.log'
+2025-10-16 16:08:32,808 - __main__ - ERROR - ❌ Erro ao inicializar banco de dados: [Errno 13] Permission denied: '/var/lib/penareia'
+2025-10-16 16:08:33,228 - __main__ - INFO - ✅ FFmpeg configurado: /usr/bin/ffmpeg
+2025-10-16 16:08:34,042 - __main__ - INFO - 📤 Thread de upload iniciada
+2025-10-16 16:08:34,042 - __main__ - ERROR - ❌ Erro ao recuperar uploads pendentes: unable to open database file
+2025-10-16 16:08:34,043 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 16:08:34,043 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 16:08:34,045 - __main__ - INFO - 🎥 Iniciando captura (tentativa 1)
+2025-10-16 16:08:34,045 - __main__ - INFO - 🎥 Thread de captura iniciada
+2025-10-16 16:08:35,164 - __main__ - INFO - ✅ Conectado à câmera: 704x480 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 16:08:39,047 - __main__ - INFO - 🚀 Servidor Flask: 0.0.0.0:5000
+2025-10-16 16:08:39,048 - __main__ - INFO - 📱 mDNS: PenAreia-Camera.local:5000
+2025-10-16 16:08:39,053 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.86.77:5000
+2025-10-16 16:08:39,056 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-16 16:11:37,784 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:11:37] "GET / HTTP/1.1" 200 -
+2025-10-16 16:11:38,116 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:11:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-16 16:12:50,282 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:12:50] "[31m[1mGET /trigger?run=1 HTTP/1.1[0m" 405 -
+2025-10-16 16:13:14,573 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:13:14] "[31m[1mGET /trigger?run=1 HTTP/1.1[0m" 405 -
+2025-10-16 16:15:52,713 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:15:52] "GET / HTTP/1.1" 200 -
+2025-10-16 16:17:40,391 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:17:40] "GET / HTTP/1.1" 200 -
+2025-10-16 16:18:56,729 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:18:56] "GET / HTTP/1.1" 200 -
+2025-10-16 16:19:02,705 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:19:02] "[31m[1mGET /trigger?run=1 HTTP/1.1[0m" 405 -
+2025-10-16 16:19:25,295 - app - ERROR - Exception on /trigger [POST]
+Traceback (most recent call last):
+  File "/home/pi/PenAreia092025/app.py", line 367, in convert_video_with_ffmpeg
+    stream = ffmpeg.input(input_path)
+             ^^^^^^^^^^^^
+AttributeError: module 'ffmpeg' has no attribute 'input'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/.local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/.local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/.local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/PenAreia092025/app.py", line 1161, in trigger
+    conversion_success, conversion_result = convert_video_with_ffmpeg(temp_filename, final_filename)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/PenAreia092025/app.py", line 407, in convert_video_with_ffmpeg
+    except ffmpeg.Error as e:
+           ^^^^^^^^^^^^
+AttributeError: module 'ffmpeg' has no attribute 'Error'
+2025-10-16 16:19:25,331 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:19:25] "[35m[1mPOST /trigger HTTP/1.1[0m" 500 -
+2025-10-16 16:19:30,047 - app - ERROR - Exception on /trigger [POST]
+Traceback (most recent call last):
+  File "/home/pi/PenAreia092025/app.py", line 367, in convert_video_with_ffmpeg
+    stream = ffmpeg.input(input_path)
+             ^^^^^^^^^^^^
+AttributeError: module 'ffmpeg' has no attribute 'input'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/.local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/.local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/.local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/PenAreia092025/app.py", line 1161, in trigger
+    conversion_success, conversion_result = convert_video_with_ffmpeg(temp_filename, final_filename)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/PenAreia092025/app.py", line 407, in convert_video_with_ffmpeg
+    except ffmpeg.Error as e:
+           ^^^^^^^^^^^^
+AttributeError: module 'ffmpeg' has no attribute 'Error'
+2025-10-16 16:19:30,082 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:19:30] "[35m[1mPOST /trigger HTTP/1.1[0m" 500 -
+2025-10-16 16:22:13,990 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
+2025-10-16 16:22:13,994 - __main__ - INFO - 🧹 Limpando recursos...
+2025-10-16 16:22:14,256 - __main__ - INFO - 📡 mDNS encerrado
+2025-10-16 16:27:01,996 - __main__ - INFO - 🎬 === INICIANDO SERVIDOR FLASK FILMAEU ===
+2025-10-16 16:27:01,997 - __main__ - INFO - 🖥️ Plataforma: Linux aarch64
+2025-10-16 16:27:01,997 - __main__ - INFO - 🍓 Modo Raspberry Pi ativado com otimizações ARM
+2025-10-16 16:27:01,997 - __main__ - INFO - 📋 Configurações:
+2025-10-16 16:27:01,997 - __main__ - INFO -    • Vídeo fonte: rtsp://admin:diogo1327@192.168.86.79:554/cam/realmonitor?channel=1&subtype=1
+2025-10-16 16:27:01,998 - __main__ - INFO -    • Buffer: 25s
+2025-10-16 16:27:01,998 - __main__ - INFO -    • Gravação: 20s
+2025-10-16 16:27:01,998 - __main__ - INFO -    • FPS forçado: 24
+2025-10-16 16:27:01,998 - __main__ - INFO -    • Resolução máxima: 1280x720
+2025-10-16 16:27:01,998 - __main__ - INFO -    • Webhook: https://penareiabeach.com.br/webhook.php
+2025-10-16 16:27:01,999 - __main__ - INFO -    • Bucket B2: penareiabaldev4
+2025-10-16 16:27:01,999 - __main__ - WARNING - ⚠️ Não foi possível reconfigurar logging: [Errno 13] Permission denied: '/var/log/penareia.log'
+2025-10-16 16:27:01,999 - __main__ - ERROR - ❌ Erro ao inicializar banco de dados: [Errno 13] Permission denied: '/var/lib/penareia'
+2025-10-16 16:27:02,412 - __main__ - INFO - ✅ FFmpeg configurado: /usr/bin/ffmpeg
+2025-10-16 16:27:03,224 - __main__ - INFO - 📤 Thread de upload iniciada
+2025-10-16 16:27:03,224 - __main__ - ERROR - ❌ Erro ao recuperar uploads pendentes: unable to open database file
+2025-10-16 16:27:03,225 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 16:27:03,225 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-16 16:27:03,226 - __main__ - INFO - 🎥 Iniciando captura (tentativa 1)
+2025-10-16 16:27:03,226 - __main__ - INFO - 🎥 Thread de captura iniciada
+2025-10-16 16:27:04,384 - __main__ - INFO - ✅ Conectado à câmera: 704x480 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 16:27:08,229 - __main__ - INFO - 🚀 Servidor Flask: 0.0.0.0:5000
+2025-10-16 16:27:08,230 - __main__ - INFO - 📱 mDNS: PenAreia-Camera.local:5000
+2025-10-16 16:27:08,236 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.86.77:5000
+2025-10-16 16:27:08,241 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-16 16:27:33,772 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:27:33] "GET / HTTP/1.1" 200 -
+2025-10-16 16:27:37,957 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:27:37] "[31m[1mGET /trigger?run=1 HTTP/1.1[0m" 405 -
+2025-10-16 16:27:46,706 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:27:46] "[35m[1mPOST /trigger HTTP/1.1[0m" 500 -
+2025-10-16 16:27:49,281 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:27:49] "[35m[1mPOST /trigger HTTP/1.1[0m" 500 -
+2025-10-16 16:29:03,343 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:29:03] "[31m[1mGET /trigger?run=1 HTTP/1.1[0m" 405 -
+2025-10-16 16:29:32,623 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 16:29:32] "[35m[1mPOST /trigger HTTP/1.1[0m" 500 -
+2025-10-16 19:42:07,814 - __main__ - WARNING - ⚠️ Falha na leitura do frame (1)
+2025-10-16 19:42:07,919 - __main__ - WARNING - ⚠️ Falha na leitura do frame (2)
+2025-10-16 19:42:08,024 - __main__ - WARNING - ⚠️ Falha na leitura do frame (3)
+2025-10-16 19:42:08,128 - __main__ - WARNING - ⚠️ Falha na leitura do frame (4)
+2025-10-16 19:42:08,233 - __main__ - WARNING - ⚠️ Falha na leitura do frame (5)
+2025-10-16 19:42:08,337 - __main__ - WARNING - ⚠️ Falha na leitura do frame (6)
+2025-10-16 19:42:08,441 - __main__ - WARNING - ⚠️ Falha na leitura do frame (7)
+2025-10-16 19:42:08,545 - __main__ - WARNING - ⚠️ Falha na leitura do frame (8)
+2025-10-16 19:42:08,649 - __main__ - WARNING - ⚠️ Falha na leitura do frame (9)
+2025-10-16 19:42:08,754 - __main__ - WARNING - ⚠️ Falha na leitura do frame (10)
+2025-10-16 19:42:08,858 - __main__ - WARNING - ⚠️ Falha na leitura do frame (11)
+2025-10-16 19:42:08,861 - __main__ - ERROR - ❌ Muitas falhas consecutivas, reconectando...
+2025-10-16 19:42:08,871 - __main__ - INFO - 🔄 Tentando reconectar em 5 segundos... (1/10)
+2025-10-16 19:42:13,875 - __main__ - INFO - 🎥 Iniciando captura (tentativa 2)
+2025-10-16 19:42:20,303 - __main__ - ERROR - ❌ Erro ao conectar na fonte de vídeo: rtsp://admin:diogo1327@192.168.86.79:554/cam/realmonitor?channel=1&subtype=1
+2025-10-16 19:42:25,305 - __main__ - INFO - 🎥 Iniciando captura (tentativa 3)
+2025-10-16 19:42:28,651 - __main__ - ERROR - ❌ Erro ao conectar na fonte de vídeo: rtsp://admin:diogo1327@192.168.86.79:554/cam/realmonitor?channel=1&subtype=1
+2025-10-16 19:42:33,653 - __main__ - INFO - 🎥 Iniciando captura (tentativa 4)
+2025-10-16 19:42:35,984 - __main__ - INFO - ✅ Conectado à câmera: 704x480 @ 24.00 FPS. Buffer de 25s.
+2025-10-16 20:19:16,167 - werkzeug - INFO - 192.168.86.78 - - [16/Oct/2025 20:19:16] "GET / HTTP/1.1" 200 -
+2025-10-16 22:01:10,976 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
+2025-10-16 22:01:10,979 - __main__ - INFO - 🧹 Limpando recursos...
+2025-10-16 22:01:11,243 - __main__ - INFO - 📡 mDNS encerrado
+2025-10-17 00:42:37,245 - __main__ - INFO - 🎬 === INICIANDO SERVIDOR FLASK FILMAEU ===
+2025-10-17 00:42:37,246 - __main__ - INFO - 🖥️ Plataforma: Linux aarch64
+2025-10-17 00:42:37,246 - __main__ - INFO - 🍓 Modo Raspberry Pi ativado com otimizações ARM
+2025-10-17 00:42:37,246 - __main__ - INFO - 📋 Configurações:
+2025-10-17 00:42:37,246 - __main__ - INFO -    • Vídeo fonte: rtsp://admin:diogo1327@192.168.86.79:554/cam/realmonitor?channel=1&subtype=1
+2025-10-17 00:42:37,247 - __main__ - INFO -    • Buffer: 25s
+2025-10-17 00:42:37,247 - __main__ - INFO -    • Gravação: 20s
+2025-10-17 00:42:37,247 - __main__ - INFO -    • FPS forçado: 24
+2025-10-17 00:42:37,247 - __main__ - INFO -    • Resolução máxima: 1280x720
+2025-10-17 00:42:37,247 - __main__ - INFO -    • Webhook: https://penareiabeach.com.br/webhook.php
+2025-10-17 00:42:37,247 - __main__ - INFO -    • Bucket B2: penareiabaldev4
+2025-10-17 00:42:37,248 - __main__ - WARNING - ⚠️ Não foi possível reconfigurar logging: [Errno 13] Permission denied: '/var/log/penareia.log'
+2025-10-17 00:42:37,248 - __main__ - ERROR - ❌ Erro ao inicializar banco de dados: [Errno 13] Permission denied: '/var/lib/penareia'
+2025-10-17 00:42:37,663 - __main__ - INFO - ✅ FFmpeg configurado: /usr/bin/ffmpeg
+2025-10-17 00:42:38,473 - __main__ - INFO - 📤 Thread de upload iniciada
+2025-10-17 00:42:38,473 - __main__ - ERROR - ❌ Erro ao recuperar uploads pendentes: unable to open database file
+2025-10-17 00:42:38,474 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-17 00:42:38,474 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-17 00:42:38,475 - __main__ - INFO - 🎥 Iniciando captura (tentativa 1)
+2025-10-17 00:42:38,475 - __main__ - INFO - 🎥 Thread de captura iniciada
+2025-10-17 00:42:39,634 - __main__ - INFO - ✅ Conectado à câmera: 704x480 @ 24.00 FPS. Buffer de 25s.
+2025-10-17 00:42:43,476 - __main__ - INFO - 🚀 Servidor Flask: 0.0.0.0:5000
+2025-10-17 00:42:43,476 - __main__ - INFO - 📱 mDNS: PenAreia-Camera.local:5000
+2025-10-17 00:42:43,480 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.86.77:5000
+2025-10-17 00:42:43,480 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-17 00:43:32,459 - werkzeug - INFO - 192.168.86.73 - - [17/Oct/2025 00:43:32] "GET / HTTP/1.1" 200 -
+2025-10-17 00:43:32,557 - werkzeug - INFO - 192.168.86.73 - - [17/Oct/2025 00:43:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-17 00:43:39,278 - werkzeug - INFO - 192.168.86.73 - - [17/Oct/2025 00:43:39] "[35m[1mPOST /trigger HTTP/1.1[0m" 500 -
+2025-10-17 00:44:00,319 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
+2025-10-17 00:44:00,323 - __main__ - INFO - 🧹 Limpando recursos...
+2025-10-17 00:44:00,589 - __main__ - INFO - 📡 mDNS encerrado
+2025-10-17 00:44:44,864 - __main__ - INFO - 🎬 === INICIANDO SERVIDOR FLASK FILMAEU ===
+2025-10-17 00:44:44,865 - __main__ - INFO - 🖥️ Plataforma: Linux aarch64
+2025-10-17 00:44:44,865 - __main__ - INFO - 🍓 Modo Raspberry Pi ativado com otimizações ARM
+2025-10-17 00:44:44,865 - __main__ - INFO - 📋 Configurações:
+2025-10-17 00:44:44,865 - __main__ - INFO -    • Vídeo fonte: rtsp://admin:diogo1327@192.168.86.79:554/cam/realmonitor?channel=1&subtype=1
+2025-10-17 00:44:44,866 - __main__ - INFO -    • Buffer: 25s
+2025-10-17 00:44:44,866 - __main__ - INFO -    • Gravação: 20s
+2025-10-17 00:44:44,866 - __main__ - INFO -    • FPS forçado: 24
+2025-10-17 00:44:44,866 - __main__ - INFO -    • Resolução máxima: 1280x720
+2025-10-17 00:44:44,866 - __main__ - INFO -    • Webhook: https://penareiabeach.com.br/webhook.php
+2025-10-17 00:44:44,867 - __main__ - INFO -    • Bucket B2: penareiabaldev4
+2025-10-17 00:44:44,867 - __main__ - WARNING - ⚠️ Não foi possível reconfigurar logging: [Errno 13] Permission denied: '/var/log/penareia.log'
+2025-10-17 00:44:44,867 - __main__ - ERROR - ❌ Erro ao inicializar banco de dados: [Errno 13] Permission denied: '/var/lib/penareia'
+2025-10-17 00:44:45,287 - __main__ - INFO - ✅ FFmpeg configurado: /usr/bin/ffmpeg
+2025-10-17 00:44:46,099 - __main__ - INFO - 📤 Thread de upload iniciada
+2025-10-17 00:44:46,099 - __main__ - ERROR - ❌ Erro ao recuperar uploads pendentes: unable to open database file
+2025-10-17 00:44:46,100 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-17 00:44:46,100 - __main__ - INFO - 🐕 Watchdog iniciado
+2025-10-17 00:44:46,100 - __main__ - INFO - 🎥 Iniciando captura (tentativa 1)
+2025-10-17 00:44:46,101 - __main__ - INFO - 🎥 Thread de captura iniciada
+2025-10-17 00:44:47,139 - __main__ - INFO - ✅ Conectado à câmera: 704x480 @ 24.00 FPS. Buffer de 25s.
+2025-10-17 00:44:51,101 - __main__ - INFO - 🚀 Servidor Flask: 0.0.0.0:5000
+2025-10-17 00:44:51,102 - __main__ - INFO - 📱 mDNS: PenAreia-Camera.local:5000
+2025-10-17 00:44:51,105 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.86.77:5000
+2025-10-17 00:44:51,105 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-17 00:45:09,982 - werkzeug - INFO - 192.168.86.73 - - [17/Oct/2025 00:45:09] "GET /status HTTP/1.1" 200 -
+2025-10-17 00:45:14,963 - werkzeug - INFO - 192.168.86.73 - - [17/Oct/2025 00:45:14] "[35m[1mPOST /trigger HTTP/1.1[0m" 500 -
+2025-10-17 00:45:39,920 - werkzeug - INFO - 192.168.86.73 - - [17/Oct/2025 00:45:39] "GET /status HTTP/1.1" 200 -
+2025-10-17 00:46:10,040 - werkzeug - INFO - 192.168.86.73 - - [17/Oct/2025 00:46:10] "GET /status HTTP/1.1" 200 -
+2025-10-17 01:03:26,233 - __main__ - INFO - 🛑 Sinal 2 recebido, encerrando gracefully...
+2025-10-17 01:03:26,238 - __main__ - INFO - 🧹 Limpando recursos...
+2025-10-17 01:03:26,504 - __main__ - INFO - 📡 mDNS encerrado
